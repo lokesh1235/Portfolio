@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 /* General Styles */
 body {
@@ -112,3 +113,119 @@ footer p {
     }
 }
 
+=======
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background: #004085;
+    padding: 10px 20px;
+    color: white;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: #e9ecef;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    color: #004085;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin: 10px 0 20px;
+}
+
+#hero .cta {
+    text-decoration: none;
+    background: #004085;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+#hero .cta:hover {
+    background: #002952;
+}
+
+/* Section Styles */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #004085;
+    border-bottom: 2px solid #004085;
+    padding-bottom: 5px;
+}
+
+/* List Styling */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #004085;
+    color: white;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+}
+
+>>>>>>> 068e2d8c29046c596ab8aa1e0bfb2139ca653084
