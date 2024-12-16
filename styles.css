@@ -24,6 +24,7 @@ header nav ul {
     justify-content: space-around;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 header nav ul li a {
@@ -47,43 +48,41 @@ header nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50p 20px;
+    flex-wrap: wrap; /* Allows stacking for smaller screens */
+    padding: 50px 20px;
     gap: 20px;
-    background-color: #f9f9f9; /* Optional background color */
+    background-color: #f9f9f9;
 }
 
 .hero-image {
-    flex: 0 0 150px; /* Fixed size for the image container */
+    flex: 0 0 150px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .hero-image img {
-    width: 150px; /* Circle size */
+    width: 150px;
     height: 150px;
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the image fits inside the circle */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-
 .hero-content {
-    flex: 1; /* Content takes half the width */
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 20px;
-    text-align: left; /* Align text to the left */
+    text-align: left;
 }
-
 
 .hero-content h1 {
     font-size: 2.5rem;
     color: #004085;
     margin-bottom: 10px;
 }
-
 
 .hero-content p {
     font-size: 1.2rem;
@@ -101,7 +100,6 @@ header nav ul li a:hover {
     transition: background 0.3s;
 }
 
-
 .hero-content .cta:hover {
     background: #002952;
 }
@@ -111,7 +109,7 @@ section {
     padding: 30px;
     margin: 20px auto;
     max-width: 900px;
-    background: linear-gradient(135deg, #004085, #45a049); /* Gradient */
+    background: linear-gradient(135deg, #004085, #45a049);
     color: white;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -136,8 +134,8 @@ section p {
 #resume {
     text-align: center;
     padding: 60px 30px;
-    background-color: #ffffff; /* Pure white */
-    border: 2px solid #e0e0e0; /* Subtle border for separation */
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0;
     border-radius: 8px;
 }
 
@@ -147,16 +145,16 @@ section p {
     padding: 12px 25px;
     font-size: 18px;
     border: none;
-    border-radius: 50px; /* Rounded button */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 #resume button:hover {
     background-color: #004085;
-    transform: translateY(-2px); /* Subtle lift */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Contact Section */
@@ -164,24 +162,25 @@ section p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50p 20px;
-    background: linear-gradient(135deg, #004085, #45a049);;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #004085, #45a049);
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 #contact h2 {
     margin-bottom: 20px;
-    color: #1b0085;
+    color: #ffffff;
 }
 
 #contact p {
     margin: 10px 0;
     font-size: 18px;
+    color: #ffffff;
 }
 
 #contact a {
-    color: #3a0085;
+    color: #45a049;
     text-decoration: none;
     font-weight: bold;
 }
@@ -195,7 +194,7 @@ footer {
     text-align: center;
     padding: 20px;
     background: linear-gradient(90deg, #004085, #002952);
-    color: hsl(244, 95%, 16%);
+    color: white;
     font-size: 14px;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -219,11 +218,25 @@ footer p a:hover {
 @media (max-width: 768px) {
     header nav ul {
         flex-direction: column;
+        align-items: center;
+    }
+
+    #hero {
+        flex-direction: column;
         text-align: center;
     }
 
-    #hero h1 {
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content h1 {
         font-size: 2rem;
+    }
+
+    .hero-image img {
+        width: 120px;
+        height: 120px;
     }
 
     section {
